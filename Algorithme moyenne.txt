@@ -1,0 +1,41 @@
+Algorithme averege
+Variables
+         n1 , n2 , n3 , average : reel
+         mention : chaine de caracteres
+Debut
+      
+      ecrire("enter the 1st note, 2nd note, 3rd note:")
+      lire(n1 , n2 , n3)
+      
+    tantque n1>20 ou n1<0 faire
+           ecrire("please enter the 1st note between 0 and 20:")
+           lire(n1)
+    fin tantque
+       
+       tantque n2>20 ou n2<0 faire 
+              ecrire("please enter the 2nd note between 0 and 20: ")
+       fin tantque
+          
+          tantque n3>20 ou n3<0 faire 
+                 ecrire("please enter the 3rd note between 0 and 20: ")    
+          fin tantque
+      average <-- (n1 + n2 + n3)/3
+    si average>=16 alors
+    mention <-- "very good"
+      sinon 
+          si average>=14 et average<16 alors
+             mention <-- "good"
+         sinon
+             si average>=12 et average<14 alors
+                mention <-- "fairly good"
+             sinon 
+                 si average>=10 et average<12 alors
+                    mention <-- "passable"
+                   sinon 
+                        mention <-- "insufficient"
+                fin si 
+            fin si 
+        fin si 
+    fin si 
+           ecrire("the average is :", average ," and the mention is: " , mention)
+fin
